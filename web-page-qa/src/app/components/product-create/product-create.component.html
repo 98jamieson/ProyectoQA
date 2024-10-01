@@ -1,0 +1,45 @@
+<div>
+  <div>
+    <div>
+      <div class="modal-">
+      </div>
+      <div>
+        <form [formGroup]="myForm" (ngSubmit)="addProduct()" class="mt-4 needs-validation" novalidate >
+          <div class="mb-3">
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" id="codigo" [ngModel]="this.product.codigo" formControlName="codigo"
+                  class="form-control form-control-lg" placeholder="codigo" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" id="name" [ngModel]="this.product.name" formControlName="name"
+                  class="form-control form-control-lg" placeholder="producto" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="number" id="price" [ngModel]="this.product.price" formControlName="price"
+                  class="form-control form-control-lg" placeholder="precio" required>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4 center">
+
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="">
+          <div class="col-1 center">
+            <button (click)="addProduct()"  class="btn btn-danger" *ngIf="pro.id==0">Agregar</button>
+          </div>
+          <div class="col-1 center">
+            <button (click)="updateProduct(this.product)" class="btn btn-success" *ngIf="pro.id!=0">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
